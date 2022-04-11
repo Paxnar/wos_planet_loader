@@ -2,7 +2,9 @@ local telescope = GetPartFromPort(19, "Telescope")
 local map = GetPartFromPort(23, "StarMap")
 local Screen = GetPartFromPort(1, "TouchScreen")
 local Modem = GetPartFromPort(87, "Modem")
-local systemcoords = {coord1, coord2}
+-- put your system coords here
+local systemcoords = {'coord1', 'coord2'}
+-- put the website that you're going to send data to here
 local website = 'yourwebsitehere'
 local jsons = {}
 function mysplit (inputstr, sep)
