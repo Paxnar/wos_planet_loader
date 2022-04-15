@@ -23,18 +23,21 @@ local typecoords = Screen:CreateElement("TextLabel", {
 	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 	Size = UDim2.new(1, 0, 0.3333, 0);
 	Position = UDim2.new(0, 0, 0, 0);
+	TextScaled = true;
 })
 local coordslabel = Screen:CreateElement("TextLabel", {
 	Text = "";
 	BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 	Size = UDim2.new(1, 0, 0.3333, 0);
 	Position = UDim2.new(0, 0, 0.3333, 0);
+	TextScaled = true;
 })
 local confirm = Screen:CreateElement("TextButton", {
 	Text = "Confirm";
 	BackgroundColor3 = Color3.fromRGB(128, 128, 128);
 	Size = UDim2.new(1, 0, 0.3334, 0);
 	Position = UDim2.new(0, 0, 0.6666, 0);
+	TextScaled = true;
 })
 
 local kbconnection = keyboard:Connect("TextInputted",function(msg, plr)
@@ -90,18 +93,10 @@ end
 	    Position = UDim2.new(30 * (12 + coord[1]) / 750, 0, 30 * (12 - coord[2]) / 750, 0);
 	    ImageColor3 = coordsinfo['Color']
        })
+       planet.MouseButton1Up:Connect(function(x, y)
+       print('yes')
+       end)
        --table.insert(jsons, coordsinfo)
       end
     end
 end)
-
-
-
-for i, v in pairs(jsons):
-    local planet = Screen:CreateElement("ImageButton", {
-	Image = "rbxassetid://483228156";
-	BackgroundTransparency = 1.0;
-	Size = UDim2.new(0.12, 0, 0.12, 0);
-	Position = UDim2.new(0, 0, 0.6666, 0);
-})
-end
